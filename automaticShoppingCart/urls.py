@@ -7,5 +7,6 @@ urlpatterns=[
     path('cart',views.cart,name="cart"),
     path('deleteProduct/<id>',views.cart,name="deleteProduct"),
 
+
     
     ]

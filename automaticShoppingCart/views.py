@@ -14,7 +14,8 @@ def login(request):
         print(username,password)
         userLogin = userRegistration.objects.filter(username=username, password=password)
         if userLogin:
-            return HttpResponse("hello")
+            cart_details = productInformation.objects.all()
+            return render(request,'automaticShoppingCart/cart.html',{'cart_details':cart_details})
 
     return render(request,'automaticShoppingCart/login.html')
 
